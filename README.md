@@ -17,17 +17,9 @@ Replace this paragraph with your own summary of what your version does.
 
 ## How The System Works
 
-Explain your design in plain language.
+Real-world song recommendations are driven by algorithm paths that analyze user-system interactions and build a sort of "profile." That profile is made up of aggregated actions (like play, like, skip, repeat, etc.) which are used to rank songs and assign similar songs based on other profiles' similar attributes. My particular version of this model will prioritize a content-based approach to assigning similar songs, using certain qualities of a given song to "score" and "rank" them by order of compatibility, greatest to least.
 
-Some prompts to answer:
-
-- What features does each `Song` use in your system
-  - For example: genre, mood, energy, tempo
-- What information does your `UserProfile` store
-- How does your `Recommender` compute a score for each song
-- How do you choose which songs to recommend
-
-You can include a simple diagram or bullet list if helpful.
+The Song object will contain features that are attributes of the song itself (for ranking and scoring purposes), and the UserProfile object will contain data on the amount and type of interactions the user has with the system, as well as their preferred music taste.
 
 ---
 
