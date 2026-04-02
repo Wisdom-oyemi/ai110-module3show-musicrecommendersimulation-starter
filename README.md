@@ -34,6 +34,9 @@ Otherwise 0
 
 Brief Note: above system may prioritize exact matches over songs in a slightly lower but acceptable range
 
+Sample terminal recommendation:
+![alt text](<Screenshot 2026-04-01 215603.png>)
+
 ---
 
 ## Getting Started
