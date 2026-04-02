@@ -21,6 +21,19 @@ Real-world song recommendations are driven by algorithm paths that analyze user-
 
 The Song object will contain features that are attributes of the song itself (for ranking and scoring purposes), and the UserProfile object will contain data on the amount and type of interactions the user has with the system, as well as their preferred music taste.
 
+Algorithm Recipe:
+Genre: +35 if match, otherwise 0
+Mood: +30 if match, otherwise 0
+Energy: up to +20 using closeness
+Energy score = 20 × (1 - abs(song.energy - user.target_energy))
+Hard minimum at 0
+Acoustic:
+If user likes acoustic and song.acousticness >= 0.6: +15
+If user does not like acoustic and song.acousticness <= 0.4: +15
+Otherwise 0
+
+Brief Note: above system may prioritize exact matches over songs in a slightly lower but acceptable range
+
 ---
 
 ## Getting Started
